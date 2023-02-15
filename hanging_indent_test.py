@@ -42,8 +42,8 @@ class HangingIndentCheckerTests(unittest.TestCase):
         id = 'C0002'
         regex = id+r": (.*)\."
         
-        # match = re.search(regex, output)
-        # self.assertEqual(msg_str, match.group(1)+'.')
+        match = re.search(regex, output)
+        self.assertEqual(msg_str, match.group(1)+'.')
         
 
     def test_no_break_after_hanging_indentation(self) -> None:
